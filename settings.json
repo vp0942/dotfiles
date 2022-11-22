@@ -1,0 +1,108 @@
+{
+  "files.autoSaveDelay": 500,
+  "workbench.startupEditor": "none",
+  "explorer.confirmDelete": false,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "debug.allowBreakpointsEverywhere": true,
+  "rest-client.previewResponseInUntitledDocument": true,
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.fontSize": 17,
+  // "editor.fontFamily": "'Fira Code'",
+  // The Cursive font is operator Mono, it's $200 and you need to buy it to get the cursive. Dank Mono or Victor Mono are good alternatives ,
+  // "editor.fontFamily": "'Inconsolata for Powerline','Operator Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'Inconsolata NFM','Operator Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontWeight": "400", // Regular
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.quickSuggestions": {
+    "comments": false,
+    "other": true,
+    "strings": true
+  },
+  // Wes Bos Cobalt 2
+  "workbench.colorTheme": "Cobalt2",
+  "editor.lineHeight": 25,
+  "editor.letterSpacing": 0.5,
+  "files.trimTrailingWhitespace": true,
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 1,
+  "editor.cursorBlinking": "solid",
+  "editor.renderWhitespace": "none",
+  "css.fileExtensions": [
+    "css",
+    "scss"
+  ],
+  "explorer.confirmDragAndDrop": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  //cmder setup
+  // "terminal.external.windowsExec": "D:\\Portable\\cmder\\cmder.exe",
+  // "terminal.explorerKind": "external",
+  // "terminal.integrated.profiles.windows": {
+  //   "PowerShell": {
+  //     "source": "PowerShell",
+  //     "icon": "terminal-powershell"
+  //   },
+  //   "Command Prompt": {
+  //     "path": [
+  //       "${env:windir}\\Sysnative\\cmd.exe",
+  //       "${env:windir}\\System32\\cmd.exe"
+  //     ],
+  //     "args": [],
+  //     "icon": "terminal-cmd"
+  //   },
+  //   "Git Bash": {
+  //     "path": [
+  //       "C:\\Program Files\\Git\\bin\\bash.exe"
+  //     ],
+  //     "source": "Git Bash",
+  //     "icon": "terminal-bash"
+  //   },
+  //   "Cmder": {
+  //     "path": "${env:windir}\\System32\\cmd.exe",
+  //     "args": [
+  //       "/k",
+  //       "C:\\cmder\\vendor\\bin\\vscode_init.cmd"
+  //     ]
+  //   }
+  // },
+  // "terminal.integrated.defaultProfile.windows": "Cmder",
+  //
+  //emmet
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "captainStack.settings.sites.githubGist": true,
+  // ESLINT-CONFIG-WESBOS
+  // These are all my auto-save configs
+  "editor.formatOnSave": true,
+  // turn it off for JS and JSX, we will do this via eslint
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  // show eslint icon at bottom toolbar
+  "eslint.alwaysShowStatus": true,
+  // tell the ESLint plugin to run on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "files.autoSave": "afterDelay",
+  "color-highlight.matchWords": true,
+  //PATH INTELLISENSE Christian Kohler
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
+  //Enable it if you need color picker
+  "editor.colorDecorators": false,
+  "color-highlight.markRuler": false,
+  "breadcrumbs.enabled": false,
+  "zenMode.centerLayout": false,
+  "zenMode.fullScreen": false,
+  "editor.glyphMargin": false,
+  "workbench.layoutControl.enabled": false,
+  "window.menuBarVisibility": "toggle",
+}
