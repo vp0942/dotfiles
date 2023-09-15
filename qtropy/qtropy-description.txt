@@ -1,0 +1,50 @@
+user/pass: u1/pass1 ..... u12/pass12                                                                                     ***
+
+
+
+PHP backend
+
+Състои се от две части:
+	- web, за заявките свързани с генериране на динамични HTML, CSS и JavaScript
+	- api, за комуникация между браузъра и сървъра
+
+Важни настройки:
+	config/env.config.php - към PdoConnector съдържа информация за връзката с базата данни !!! root/57irelav             ***
+	                                                          phpMyAdmin Imports zipped DataBase (file < 2 mb!!)         ***
+	config/env/apiroot.env.php - адрес на api частта
+	config/env/webroot.env.php - адрес на web частта
+	всички останали са основно за връзките между интерфейси и имплементации
+	
+Входни точки: /etc/host -> 127.0.0.1 for web.qtropy and 127.0.0.1 for api.qtropy       !! Hosts Mapping !!               ***
+              /etc/apache2/sites-available/000-default.conf -> virtual hosts settings !!!!!!!!!!!!!!!!!!!!               ***
+              /etc/php/8.2/fpm/php.ini -> display_errors=On (sudo systemctl restart php8.2-fpm)                          ***
+                                                                -> xdebug will show errors in chrome                     ***
+	public/api/index.php - входна точна за api
+		конфигурацията за пътищата е в config/api/routes.config.php
+	public/web/index.php - входна точна за api
+		конфигурацията за пътищата е в config/web/routes.config.php
+		конфигурацията за темплейтите е в configweb/templates.config.php
+	
+Модули:
+	намират се в src/Module/<module-name>/... и класовете са в съответния namespace: Walnut\Module\<module-name>\...
+	
+Темплейти:
+	намират се в templates/module/<module-name>/...
+	Web Components се намират в templates/component/... ; 
+	новодобавените компоненти трябва да се добавят в config/web/http.config.php в секцията за WebComponentGenerator.
+	темплейтите за страницата са в templates/page/...
+	
+Стилове (CSS):
+	статичните се намират в public/web/assets/styles/*.css
+	динамичните са в съседство на съответния компонент, например 
+		на templates/module/member/account-settings.tpl.php отговаря
+		на templates/module/member/account-settings-style.tpl.php 	
+
+Скриптове (JS):
+	статичните се намират в public/web/assets/scripts/*.js
+		специфичните за редактора са отделени в public/web/assets/scripts/editor/*.js
+	динамичните са в съседство на съответния компонент, например 
+		на templates/module/member/account-settings.tpl.php отговаря
+		на templates/module/member/account-settings-script.tpl.php 
+		
+Logs: In folder dev (777) in /var/www/html/gtropy-full-main/dev -> Read The Logs !!                                       ***
