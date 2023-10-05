@@ -1,0 +1,90 @@
+% Val example
+
+# print something
+echo "My name is <name>!"
+
+$ name: whoami
+
+% Val Fzf, Files
+
+# fzf find a word in files
+rg . | fzf --print0 -e
+
+# fzf find a file and open in VS Code
+fzf --print0 -e | xargs -0 -r code
+
+# fzf find a word in files and open in VS Code
+rg . --vimgrep --color ansi | fzf --ansi --print0 | cut -z -d : -f 1-3 | xargs -0 -r code -g
+
+# Show differences between files
+cat folio.txt | diff Todo.txt -
+
+% Val Dpkg, Apt
+# List packages with residual-config
+dpkg -l | grep '^rc' | awk '{print $2}'
+
+# Purge packages with residual-config
+sudo apt-get purge $(dpkg -l | grep '^rc' | awk '{print $2}')
+
+# Show to which package the files belong
+dpkg -S *
+
+% Val chmod
+
+# chmod 755 recursively all directories in someDir
+find someDir -type d -exec chmod 755 {} \;
+
+# chmod 644 recursively all files in someDir
+find someDir -type f -exec chmod 644 {} \;
+
+% Val Network
+
+# Show current IP address:
+curl ifconfig.me
+
+# Show all ports on witch we LISTEN
+ss -a | grep LISTEN
+
+# Show connection on oprt 22 (SSH)
+ss -a -n | grep ESTAB 22
+
+# Show connections to IP 192.168.100.6
+ss -a -n | grep 192.168.100.6
+
+# Show all tcp connections
+ss --tcp -n
+
+% Val processes
+
+# Show process by name
+ps -fC PROCESSNAME
+
+# Show the process of apache2
+ps axu | grep apache2
+
+% Val System
+
+# max disk usage
+du -h --max-depth=1 |sort -rh
+
+# OS Info
+echo /etc/*_ver* /etc/*-rel*; cat /etc/*_ver* /etc/*-rel*
+
+# Environment variables
+env
+
+# PATH
+echo $PATH
+
+# Show Users
+cat /etc/passwd
+
+# Show Groups
+cat /etc/group
+
+# Show Hosts
+cat /etc/hosts
+
+
+
+
