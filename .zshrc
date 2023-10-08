@@ -41,7 +41,7 @@ alias "git latest"="git for-each-ref --sort=-committerdate refs/heads/"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # thefuck -> use ESC ESC
-plugins=(git node npm wd extract z zsh-syntax-highlighting zsh-autosuggestions dirnav fzf fd web-search thefuck)
+plugins=(git node npm wd extract z zsh-syntax-highlighting zsh-autosuggestions dirnav fzf fd web-search thefuck command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,7 +71,6 @@ function dl() {
 function openall() {
   for folder in */; do code $folder && gnome-terminal; done
 }
-
 
 PR_TITLEBAR=''
 set-window-title
