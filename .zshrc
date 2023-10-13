@@ -3,9 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="cobalt2"
 
-# navi path and shell integratio -> use Ctrl-G
-export PATH=$PATH:$HOME/.cargo/bin
-eval "$(navi widget zsh)"
+alias zs="source ~/.zshrc"
 
 alias mktar='tar -cvf', mkbz2='tar -cvjf', mkgz='tar -cvzf'
 alias untar='tar -xvf', unbz2='tar -xvjf', ungz='tar -xvzf'
@@ -18,8 +16,10 @@ alias pbpaste='xsel -bo'
 # This will output the contents of your clipboard.
 # $ pbpaste
 
-alias zs="source ~/.zshrc"
+alias gedit="gedit --new-window"
+
 alias nvim="/home/vv/appimage/nvim.appimage "
+
 
 
 alias gum="git pull upstream master"
@@ -78,6 +78,13 @@ add-zsh-hook precmd set-window-title
 
 # red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
+
+# navi path and shell integratio -> use Ctrl-G
+export PATH=$PATH:$HOME/.cargo/bin
+eval "$(navi widget zsh)"
+
+# adding /home/vv/.local/bin to the PATH
+export PATH=$PATH:$HOME/.local/bin
 
 # Maintains you .zsh_history file clean
 #setopt HIST_EXPIRE_DUPS_FIRST

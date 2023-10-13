@@ -1,7 +1,7 @@
 % Val example
 
 # print something
-echo "My name is <name>!"
+echo "My name is <name>"
 
 $ name: whoami
 
@@ -54,7 +54,7 @@ ss -a -n | grep 192.168.100.6
 # Show all tcp connections
 ss --tcp -n
 
-% Val processes
+% Val Processes
 
 # Show process by name
 ps -fC PROCESSNAME
@@ -85,6 +85,43 @@ cat /etc/group
 # Show Hosts
 cat /etc/hosts
 
+% Val Docker
 
+# List docker images accoding to a pattern
+docker images -a |  grep "pattern"
 
+# Remove docker images accoding to a pattern
+docker images -a | grep "pattern" | awk '{print $3}' | xargs docker rmi
+
+# Remove all docker images
+docker rmi $(docker images -a -q)
+
+# List all exited docker containers
+docker ps -a -f status=exited
+
+# Remove all exited docker containers
+docker rm $(docker ps -a -f status=exited -q)
+
+# List docker containers using more than one filter
+docker ps -a -f status=exited -f status=created
+
+# Remove docker containers using more than one filter
+docker rm $(docker ps -a -f status=exited -f status=created -q)
+
+# List docker containers accoding to a pattern
+docker ps -a |  grep "pattern”
+
+# Remove docker containers accoding to a pattern
+docker ps -a | grep "pattern" | awk '{print $1}' | xargs docker rm
+
+# Stop and remove all docker containers
+docker stop $(docker ps -a -q); docker rm $(docker ps -a -q)
+
+% Val Tmux
+
+# Attach back to tmux session with name (target) 0
+tmux attach -t 0
+
+# Rename tmux session 0 to git 
+tmux rename-session -t 0 git
 

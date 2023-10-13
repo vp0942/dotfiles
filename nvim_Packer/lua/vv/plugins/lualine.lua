@@ -16,7 +16,7 @@ local new_colors = {
   black = "#000000",
 }
 
--- change nightfly theme colors
+-- change nightlfy theme colors
 lualine_nightfly.normal.a.bg = new_colors.blue
 lualine_nightfly.insert.a.bg = new_colors.green
 lualine_nightfly.visual.a.bg = new_colors.violet
