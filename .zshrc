@@ -20,7 +20,8 @@ alias gedit="gedit --new-window"
 
 alias nvim="/home/vv/appimage/nvim.appimage "
 
-
+alias wstorm="/home/vv/Downloads/WebStorm/bin/webstorm.sh"
+alias idea="/home/vv/Downloads/idea/bin/idea.sh"
 
 alias gum="git pull upstream master"
 
@@ -93,6 +94,9 @@ export PATH=$PATH:$HOME/.local/bin
 #setopt HIST_FIND_NO_DUPS
 #setopt HIST_SAVE_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
+
+#keep the oh-my-zsh autosearch .zcompdump files in better location (not in /vv/home)
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 # fzf
 export FZF_DEFAULT_COMMAND='fdfind --type f --color=never --hidden'
