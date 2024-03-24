@@ -1,9 +1,9 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="cobalt2"
+ZSH_THEME='cobalt2'
 
-alias zs="source ~/.zshrc"
+alias zs='source ~/.zshrc'
 
 alias mktar='tar -cvf', mkbz2='tar -cvjf', mkgz='tar -cvzf'
 alias untar='tar -xvf', unbz2='tar -xvjf', ungz='tar -xvzf'
@@ -23,20 +23,25 @@ alias nvim="/home/vv/appimage/nvim.appimage "
 alias wstorm="/home/vv/Downloads/WebStorm/bin/webstorm.sh"
 alias idea="/home/vv/Downloads/idea/bin/idea.sh"
 
-alias gum="git pull upstream master"
+# Github Copilot
+alias copilot='gh copilot'
+alias gcs='gh copilot suggest'
+alias gce='gh copilot explain'
+
+alias gum='git pull upstream master'
 
 # Changed your .gitignore _after_ you have added / committed some files?
 # run `gri` to untrack anything in your updated .gitignore
 # Put this in your .zshrc file
-alias gri="git ls-files --ignored --exclude-standard | xargs -0 git rm -r"
+alias gri='git ls-files --ignored --exclude-standard | xargs -0 git rm -r'
 
 # Open all merge conflicts or currently changed files in VS Code
 # Switch out `code` for `subl`, `vim`, `atom` or your editor's CLI
-alias fix="git diff --name-only | uniq | xargs code"
+alias fix='git diff --name-only | uniq | xargs code'
 
-# alias 🖕😏🖕="git push --force"
+# alias 🖕😏🖕='git push --force'
 
-alias "git latest"="git for-each-ref --sort=-committerdate refs/heads/"
+alias 'git latest'='git for-each-ref --sort=-committerdate refs/heads/'
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
