@@ -25,8 +25,8 @@ alias idea="/home/vv/Downloads/idea/bin/idea.sh"
 
 # Github Copilot
 alias copilot='gh copilot'
-alias gcs='gh copilot suggest'
-alias gce='gh copilot explain'
+alias ghcs='gh copilot suggest'
+alias ghce='gh copilot explain'
 
 alias gum='git pull upstream master'
 
